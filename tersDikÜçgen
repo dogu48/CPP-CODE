@@ -1,0 +1,30 @@
+#include<iostream>
+using namespace std;
+
+void patternNumberLadder(int n);
+
+int main(){
+
+    int rows{};
+    cin >> rows;
+    patternNumberLadder(rows);
+
+    return 0;
+}
+
+void patternNumberLadder(int n)
+{
+
+    for (int i = n ; i >= 1; --i)
+    {
+        for (int j = 1; j <= i ; ++j)
+        {
+            cout << "* ";
+        }
+        cout << endl;
+    }
+
+
+    };
+
+
