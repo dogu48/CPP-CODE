@@ -1,0 +1,59 @@
+#include <iostream>
+#include <cstdlib>
+
+using namespace std;
+void orderNumbers(double* ptrNumA, double* ptrNumB, double* ptrNumC) {
+    double max, med, min;
+    if (*ptrNumA > * ptrNumB&& *ptrNumB > * ptrNumC) {
+        max = *ptrNumA;
+        med = *ptrNumB;
+        min = *ptrNumC;
+
+    }
+    else if (*ptrNumB > * ptrNumA&& *ptrNumA > * ptrNumC) {
+        max = *ptrNumB;
+        med = *ptrNumA;
+        min = *ptrNumC;
+
+    }
+    else if (*ptrNumC > * ptrNumA&& *ptrNumA > * ptrNumB) {
+        max = *ptrNumC;
+        med = *ptrNumA;
+        min = *ptrNumB;
+
+    }
+    else if (*ptrNumC > * ptrNumB&& *ptrNumB > * ptrNumA) {
+        max = *ptrNumC;
+        med = *ptrNumB;
+        min = *ptrNumA;
+
+    }
+    else if (*ptrNumB > * ptrNumC&& *ptrNumC > * ptrNumA) {
+        max = *ptrNumB;
+        med = *ptrNumC;
+        min = *ptrNumA;
+
+    }
+    else if (*ptrNumA > * ptrNumC && *ptrNumC > * ptrNumB) {
+        max = *ptrNumA;
+        med = *ptrNumC;
+        min = *ptrNumB;
+
+    }
+    cout << max << " " << med << " " << min;
+
+}
+
+int main() {
+    double numa, numb, numc;
+    double* ptra, * ptrb, * ptrc;
+    ptra = &numa;
+    ptrb = &numb;
+    ptrc = &numc;
+
+    cin >> numa >> numb >> numc;
+
+    orderNumbers(&numa, &numb, &numc);
+
+    return 0;
+}
