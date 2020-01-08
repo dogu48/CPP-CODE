@@ -1,0 +1,54 @@
+#include <iostream>
+
+using namespace std;
+
+int main(){
+   float faizTuru,anaPara,vadeTuru,vade,faizOrani,faizTutari,payda;
+	cout<<"Hangi tur faiz yapmak isterdiniz?\n1-Basit Faiz\n2-Bilesik faiz"<<endl;
+	cin>>faizTuru;
+
+ while(faizTuru>2){
+    cout<<"Hatali giris yaptiniz lutfen tekrar deneyiniz."<<endl;
+    cin>>faizTuru;
+ }
+ cout<<"Ana Para :";
+ cin>>anaPara;
+ if(faizTuru == 1){
+    cout<<"\n\n\n Vade turunu seciniz.1-gunluk\n2-aylık\n3-yıllık";
+    cin>>vadeTuru;
+ }
+else{
+    vadeTuru = 3;
+}
+cout<<"Vadeyi giriniz : ";
+cin>>vade;
+cout<<"Faiz oranini giriniz : ";
+cin>>faizOrani;
+if(vadeTuru==1){
+    payda=36000;
+}
+else if(vadeTuru==2){
+    payda=1200;
+}
+else{
+    payda=100;
+}
+if(faizTuru==1){
+    faizTutari = (anaPara*vade*faizOrani/payda);
+    	cout << "\nFaiz Tutari: " << faizTutari << "TL" << endl;
+		cout << "Vade Sonu Toplam: " << anaPara+faizTutari << "TL";
+		}
+
+   else if(faizTuru == 2) {
+
+		for(int i=1; i<=vade; i++) {
+			faizTutari = (anaPara*faizOrani)/payda;
+			anaPara = anaPara+faizTutari;
+		}
+		cout << "Vade Sonu Toplam: " << anaPara << "TL";
+
+	} else {
+		cout << "!!!! Hesaplama Seklini Yanlis Sectiniz.\n\n";
+	}
+return 0;
+}
