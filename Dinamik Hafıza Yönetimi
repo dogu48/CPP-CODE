@@ -1,0 +1,38 @@
+#include <iostream>
+#include <cstdlib>
+
+using namespace std;
+
+int main() {
+    char *charList;
+    charList = (char*)malloc(5 * sizeof(char));
+    
+    int arraySize = 5;
+    int numberIndex = 0;
+    char n;
+
+    cin >> n;
+    while (n != '%') {
+        if (n == '+') {
+            arraySize++;
+            charList = (char*)realloc(charList, arraySize * sizeof(char));
+        }
+        else if (n == '-') {
+            arraySize--;
+            charList = (char*)realloc(charList, arraySize * sizeof(char));
+            if (arraySize <= numberIndex) {
+                numberIndex = arraySize;
+            }
+        }
+        else if (arraySize>numberIndex) {
+            charList[numberIndex] = n;
+            numberIndex++;
+        }
+        cin >> n;
+    }
+    for (int i = 0; i < numberIndex; i++)
+    {
+        cout << charList[i] << " ";
+    }
+    return 0;
+}
