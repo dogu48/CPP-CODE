@@ -1,0 +1,32 @@
+#include <iostream>
+#include <fstream>
+using namespace std;
+
+
+int main() {
+
+    ofstream outfile;
+    outfile.open("sequence.txt");
+
+    char ch{};
+    while((ch != '*'))
+    {
+        cin >> ch;
+        if(ch != '*')
+        {
+            outfile << ++ch;
+        }
+    }
+
+    outfile.close();
+
+    ifstream infile;
+    infile.open("sequence.txt");
+    while(infile >> ch)
+    {
+        cout << ch << " ";
+    }
+    infile.close();
+
+    return 0;
+}
