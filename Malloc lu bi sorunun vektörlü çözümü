@@ -1,0 +1,24 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+
+    vector <int> numbers;
+    int n;
+    while(cin >> n)
+    {
+        numbers.push_back(n);
+        if (n < 0)
+            break;
+    }
+    int i;
+    for (i = 0; i < numbers.size() ; ++i)
+    {
+        if(numbers.at(i) > 0)
+            cout << numbers.at(i) << " ";
+    }
+    return 0;
+}
+
+//Vektörle daha kolay ama kabul edilmeyebilir
