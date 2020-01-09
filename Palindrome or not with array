@@ -1,0 +1,29 @@
+#include <iostream>
+
+int main() {
+    int N;
+    int numberArray[5000];
+    bool isSymmetrical = true;
+
+    std::cin >> N;
+
+    for(int numberIndex=0; numberIndex<N; numberIndex++){
+        std::cin >> numberArray[numberIndex];
+    }
+
+    for (int comparisonIndex=0; comparisonIndex < N/2; comparisonIndex++){
+        if (numberArray[comparisonIndex] != numberArray[N-comparisonIndex-1]){
+            isSymmetrical = false;
+        }
+    }
+
+    if (isSymmetrical){
+        std::cout << "The sequence is symmetrical" << std::endl;
+    }
+    else{
+        std::cout << "The sequence is NOT symmetrical" << std::endl;
+    }
+
+    return 0;
+}
+
