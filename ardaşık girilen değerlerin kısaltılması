@@ -47,3 +47,5 @@ int main()
     cin >> c;
     cout << f(c) << endl;
 }
+//Aynı karaktarden çift sayıda varsa yoksay
+//Tek sayıda varsa yazdır
