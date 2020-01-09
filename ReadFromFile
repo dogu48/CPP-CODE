@@ -1,0 +1,28 @@
+
+#include <iostream>
+#include <fstream>
+using namespace std;
+
+
+int main(){
+
+
+    int num{};
+    ofstream outfile;
+    outfile.open("numberSequence.txt");
+    outfile << "6 7 12 95 -7 -8 0 9 96 55 0 -6 -75 65 4 5 1 2 2 8";
+    outfile.close();
+
+    ifstream infile;
+    infile.open("numberSequence.txt");
+    while(infile >> num)
+    {
+        if (num % 2 == 0)
+        {
+            cout << num << " ";
+        }
+    }
+    infile.close();
+
+    return 0;
+}
