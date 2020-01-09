@@ -1,0 +1,30 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main(){
+
+ double elemansayisi,result=0,ort=0,standartSapma,toplam=0;
+ int elemanlar[50000];
+
+
+ cin>>elemansayisi;
+
+ for(int i =0;i<elemansayisi;i++){
+    cin>>elemanlar[i];
+    result+=elemanlar[i];
+ }
+   ort=result/elemansayisi;
+
+ for(int j=0;j<=elemansayisi-1;j++){
+
+    toplam+=pow(elemanlar[j]-ort,2);
+ }
+
+ standartSapma=sqrt(toplam/(elemansayisi-1));
+
+
+ cout<<standartSapma;
+
+    return 0;
+    }
