@@ -1,0 +1,24 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+
+int main() {
+
+    cout << " Enter num: ";
+    int num{};
+    cin >> num;
+
+    cout << " Enter maskDigitCount: ";
+    int maskDigitCount{};
+    cin >> maskDigitCount;
+
+    int total{0};
+    total = (pow(2, maskDigitCount)) - 1;
+
+    int maskedValue{};
+    maskedValue = num & total;
+    cout << "Masked Value of the num " << maskedValue;
+
+    return 0;
+}
