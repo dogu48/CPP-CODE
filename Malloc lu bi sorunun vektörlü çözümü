@@ -22,3 +22,6 @@ int main() {
 }
 
 //Vektörle daha kolay ama kabul edilmeyebilir
+//Write a program that declares an integer array of size 8 using dynamic memory allocation. Then, the program keeps asking for numbers from the user to put inside the array until a negative number is entered.
+If the user enters more than 8 numbers, the program MUST increase the size of the array ONE BY ONE using reallocmethod.
+Finally, the program will write all the numbers inside the array.
