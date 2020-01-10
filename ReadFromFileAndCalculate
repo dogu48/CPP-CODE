@@ -1,0 +1,60 @@
+#include <iostream>
+#include <fstream>
+
+using namespace std;
+
+int main()
+{
+    string filename;
+    cin >> filename;
+    ifstream in_file;
+    in_file.open(filename);
+
+    if(!in_file)
+    {
+        cerr << "Problem opening file";
+        return 1;
+    }
+
+    int FirstNumber{};
+    int SecondNumber{};
+    char operation;
+
+    while(in_file >> FirstNumber >> operation >>SecondNumber)
+    {
+
+        if(operation == '+')
+        {
+            cout << FirstNumber + SecondNumber;
+            cout << endl;
+        }
+
+        else if(operation == '-')
+        {
+            cout << FirstNumber - SecondNumber;
+            cout << endl;
+        }
+
+
+        else if(operation == '*')
+        {
+            cout << FirstNumber * SecondNumber;
+            cout << endl;
+        }
+
+        else if(operation == '/')
+        {
+            cout << FirstNumber / SecondNumber;
+            cout << endl;
+        }
+    }
+
+
+    return 0;
+}
+
+
+
+// Read two numbers and operations and calculate 
+// Example 5 + 3 8
+//         7 * 8 56
