@@ -4,4 +4,4 @@ Kodlarınızı pull-request başlatarak paylaşabilirsiniz.
 
 New issue ile soru sorabilirsiniz.
 
-Deneme
+Visual studio deneme
